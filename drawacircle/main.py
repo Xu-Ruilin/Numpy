@@ -1,10 +1,9 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
-arr1 = np.random.randn(8, 3)
-print(arr1)
-
-arr2 = np.where(arr1 > 0, 1, -1) # if arr1 > 0, then 1, else -1
-print(arr2)
-
-arr3 = arr1 > 0
-print(arr3)
+nsteps = 0
+while nsteps <= 200:
+    draws = np.random.randint(0, 100, size=nsteps)
+    print(draws)
+    nsteps = nsteps + 1
+draws.tofile('draws.txt', str(draws))
